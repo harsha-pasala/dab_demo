@@ -3,7 +3,7 @@ concurrency: 1
 on:
   pull_request:
     branches:
-    - main
+    - master
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.E2_SP_TOKEN }}
@@ -22,16 +22,12 @@ jobs:
         uses: databricks/setup-cli@main
 
       - name: Deploy Bundle
-        working-directory: my_project
         id: deploy_bundle
         run: databricks bundle deploy
 
   pipeline_update:
     name: "Run DLT Pipeline update"
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: my_project
 
     needs:
       - deploy
