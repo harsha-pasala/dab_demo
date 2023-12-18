@@ -3,7 +3,7 @@ concurrency: 1
 on:
   pull_request:
     branches:
-    - main
+    - master
 
 env:
   DATABRICKS_TOKEN: ${{ secrets.E2_SP_TOKEN }}
