@@ -16,7 +16,7 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://dbc-a49c6081-8a5a.cloud.databricks.com
+      host: https://e2-demo-field-eng.cloud.databricks.com/
 
   # Optionally, there could be a 'staging' target here.
   # (See Databricks docs on CI/CD at https://docs.databricks.com/dev-tools/bundles/index.html.)
@@ -33,8 +33,7 @@ targets:
     # to a path that is not specific to the current user.
     mode: production
     workspace:
-      host: https://dbc-a49c6081-8a5a.cloud.databricks.com
-      root_path: /Shared/.bundle/prod/${bundle.name}
+      host: https://e2-demo-field-eng.cloud.databricks.com/
     run_as:
       # This runs as harsha.pasala@databricks.com in production. Alternatively,
       # a service principal could be used here using service_principal_name
